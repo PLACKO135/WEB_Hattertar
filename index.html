@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>Sebesség számoló</h1>
+    
+    <form>
+
+        <label for="kapacitas">Kapacitás</label>
+
+        <input type="number" name="kapacitas" id="kapacitas">
+        <select name="kapacitasme" id="kapacitasme">
+            <option value="Mb">Mb</option>
+            <option value="Gb">Gb</option>
+            <option value="Tb">Tb</option>
+        </select>
+        <br>
+
+        <label for="atvitelseb">Átviteli sebesség</label>
+
+        <input type="range" name="atvitelseb" id="atvitelseb" min="10" max="5000" oninput="atvitelMegjel()">
+        <span id="atvitelsebesseg"></span>
+
+        <select name="atvitelme" id="atvitelme">
+            <option value="Mbps">mbps</option>
+            <option value="KBps">KBps</option>
+            <option value="MBps">MBps</option>
+            <option value="GBps">GBps</option>
+        </select>
+        <br>
+        <br>
+        <br>
+
+        <button type="button" id="gomb" onclick="kiszamol()">Számol</button>
+
+    </form>
+
+    <h3>Az átviteli sebesség: <span id="eredmeny">____</span> másodperc.</h3>
+
+</body>
+
+</html>
